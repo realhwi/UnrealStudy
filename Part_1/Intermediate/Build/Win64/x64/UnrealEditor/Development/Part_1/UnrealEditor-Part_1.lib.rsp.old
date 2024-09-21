@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Part_1.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\00_git_update\01_Study\00_Unreal_class\00_Unrealbasic\Part_1\Intermediate\Build\Win64\x64\Part_1Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\00_git_update\01_Study\00_Unreal_class\00_Unrealbasic\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Part_1.cpp.obj"
+"D:\00_git_update\01_Study\00_Unreal_class\00_Unrealbasic\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Default.rc2.res"
+/OUT:"D:\00_git_update\01_Study\00_Unreal_class\00_Unrealbasic\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\UnrealEditor-Part_1.lib"
