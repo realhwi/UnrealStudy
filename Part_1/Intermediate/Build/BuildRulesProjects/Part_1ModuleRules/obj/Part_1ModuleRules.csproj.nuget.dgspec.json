@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj": {}
+    "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj": {}
   },
   "projects": {
-    "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj": {
+    "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
+        "projectUniqueName": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
         "projectName": "Part_1ModuleRules",
-        "projectPath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
+        "projectPath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\obj\\",
+        "outputPath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

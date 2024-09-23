@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h4AVuzPgOxPtJ3tE89pmUYhJRu/fEzly9QUo0AjGfk6hxsbtUuT10qzMde4vEbg1TqnvPhnzMPTzcl3KKWSNbw==",
+  "dgSpecHash": "1J+88ADGHkgY24o0aUVbJD0y1vRjlzuBVITMK0VmSG0jxG6yaTGnlzZi9agV9ca9+fE6gZxtnxUKrTdag5RT0Q==",
   "success": true,
-  "projectFilePath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
+  "projectFilePath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\bitfaster.caching\\2.4.1\\bitfaster.caching.2.4.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\blake3\\0.5.1\\blake3.0.5.1.nupkg.sha512",

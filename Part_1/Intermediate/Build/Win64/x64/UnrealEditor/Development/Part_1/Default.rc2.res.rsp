@@ -80,5 +80,5 @@
 /DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
 /DPROJECT_PRODUCT_IDENTIFIER=Part_1
-/fo "D:\00_git_update\01_Study\00_Unreal_class\00_Unrealbasic\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Default.rc2.res"
+/fo "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"

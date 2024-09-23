@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PART_1_MyGameInstance_generated_h
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Unrealbasic_Part_1_Source_Part_1_MyGameInstance_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyGameInstance(); \
 	friend struct Z_Construct_UClass_UMyGameInstance_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UMyGameInstance)
 
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Unrealbasic_Part_1_Source_Part_1_MyGameInstance_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMyGameInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UMyGameInstance();
 
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Unrealbasic_Part_1_Source_Part_1_MyGameInstance_h_12_PROLOG
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Unrealbasic_Part_1_Source_Part_1_MyGameInstance_h_15_GENERATED_BODY \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_12_PROLOG
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_00_git_update_01_Study_00_Unreal_class_00_Unrealbasic_Part_1_Source_Part_1_MyGameInstance_h_15_INCLASS_NO_PURE_DECLS \
-	FID_00_git_update_01_Study_00_Unreal_class_00_Unrealbasic_Part_1_Source_Part_1_MyGameInstance_h_15_ENHANCED_CONSTRUCTORS \
+	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_15_INCLASS_NO_PURE_DECLS \
+	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PART_1_API UClass* StaticClass<class UMyGameInstance>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_00_git_update_01_Study_00_Unreal_class_00_Unrealbasic_Part_1_Source_Part_1_MyGameInstance_h
+#define CURRENT_FILE_ID FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

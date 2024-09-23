@@ -8483,73 +8483,73 @@
     },
     "EpicGames.Build/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj"
     },
     "EpicGames.Core/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj"
     },
     "EpicGames.Horde/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj"
     },
     "EpicGames.IoHash/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj"
     },
     "EpicGames.MsBuild/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj"
     },
     "EpicGames.OIDC/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj"
     },
     "EpicGames.Oodle/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Oodle/EpicGames.Oodle.csproj"
     },
     "EpicGames.Serialization/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj"
     },
     "EpicGames.UBA/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.UBA/EpicGames.UBA.csproj"
     },
     "EpicGames.UHT/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj"
     },
     "MarketplaceRules/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj"
     },
     "UE5ProgramRules/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj"
     },
     "UE5Rules/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj"
     },
     "UnrealBuildTool/1.0.0": {
       "type": "project",
-      "path": "../../../../../../../../../UE_5.4/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj",
-      "msbuildProject": "../../../../../../../../../UE_5.4/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj"
+      "path": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj",
+      "msbuildProject": "../../../../../../../../../../UE_5.4/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8567,11 +8567,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
+      "projectUniqueName": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
       "projectName": "Part_1ModuleRules",
-      "projectPath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
+      "projectPath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\Part_1ModuleRules.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Unrealbasic\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\obj\\",
+      "outputPath": "D:\\00_git_update\\01_Study\\00_Unreal_class\\00_Basic\\UnrealStudy_part1\\Part_1\\Intermediate\\Build\\BuildRulesProjects\\Part_1ModuleRules\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
