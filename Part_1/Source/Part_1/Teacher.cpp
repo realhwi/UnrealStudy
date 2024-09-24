@@ -5,14 +5,11 @@
 
 UTeacher::UTeacher()
 {
-	Name = TEXT("선생이름");
-	Year = 3;
-	Id = 1;
+	Name = TEXT("김선생");
 }
 
 void UTeacher::DoLesson()
 {
-	Super::DoLesson();
-
-	UE_LOG(LogTemp,Log,TEXT("%d년차 선생님 %s님이 수업을 강의합니다."),Year,*Name);
+	ILessonInterface::DoLesson(); // 기본 동작 그대로 유지하면서 작업 사용할때 호출 
+	UE_LOG(LogTemp,Log,TEXT("%s님은 가르칩니다."),*Name);
 }

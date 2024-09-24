@@ -15,25 +15,16 @@ class PART_1_API UPerson : public UObject
 	GENERATED_BODY()
 
 public:
-	UPerson(); // 생성자 코드 
-	
-	UFUNCTION() // 언리얼 엔진의 리플렉션 시스템에 등록 
-	virtual void DoLesson(); 
+	UPerson();
 
-	const FString& GetName() const;
-	// 이렇게 반환 타입을 지정하면 멤버 변수 값을 변경하지 않고, 참조를 통해 호출할 수 있음.
-	
-	void SetName(const FString& InName);
-	// FString 타입 참조를 매개변수로 받음. 
+	// FORCEINLINE 매크로는 함수 호출 오버헤드 줄이고 실행 성능을 향상시킴 
+	FORCEINLINE FString& GetName() {return Name;}
 
+	// 멤버변수 Name을 입력받은 파라미터 InName 값을 전달받아 넣음, 함수 내에선 변경 불가(const)
+	FORCEINLINE void SeetName(const FString& InName) {Name=InName;}
+	
 protected:
 	UPROPERTY()
 	FString Name;
-
-	UPROPERTY()
-	int32 Year;
-
-private:
-	
 	
 };

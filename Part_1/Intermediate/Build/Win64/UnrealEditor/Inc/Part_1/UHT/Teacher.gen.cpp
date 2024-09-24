@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTeacher() {}
 
 // Begin Cross Module References
+PART_1_API UClass* Z_Construct_UClass_ULessonInterface_NoRegister();
 PART_1_API UClass* Z_Construct_UClass_UPerson();
 PART_1_API UClass* Z_Construct_UClass_UTeacher();
 PART_1_API UClass* Z_Construct_UClass_UTeacher_NoRegister();
@@ -35,40 +36,34 @@ struct Z_Construct_UClass_UTeacher_Statics
 		{ "IncludePath", "Teacher.h" },
 		{ "ModuleRelativePath", "Teacher.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Id_MetaData[] = {
-		{ "ModuleRelativePath", "Teacher.h" },
-	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FIntPropertyParams NewProp_Id;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UTeacher>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UTeacher_Statics::NewProp_Id = { "Id", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTeacher, Id), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Id_MetaData), NewProp_Id_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTeacher_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTeacher_Statics::NewProp_Id,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UTeacher_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UTeacher_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UPerson,
 	(UObject* (*)())Z_Construct_UPackage__Script_Part_1,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UTeacher_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_UTeacher_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_ULessonInterface_NoRegister, (int32)VTABLE_OFFSET(UTeacher, ILessonInterface), false },  // 4000020805
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_UTeacher_Statics::ClassParams = {
 	&UTeacher::StaticClass,
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
-	Z_Construct_UClass_UTeacher_Statics::PropPointers,
 	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
-	UE_ARRAY_COUNT(Z_Construct_UClass_UTeacher_Statics::PropPointers),
 	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x001000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UTeacher_Statics::Class_MetaDataParams), Z_Construct_UClass_UTeacher_Statics::Class_MetaDataParams)
 };
@@ -92,10 +87,10 @@ UTeacher::~UTeacher() {}
 struct Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Teacher_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UTeacher, UTeacher::StaticClass, TEXT("UTeacher"), &Z_Registration_Info_UClass_UTeacher, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTeacher), 2342795831U) },
+		{ Z_Construct_UClass_UTeacher, UTeacher::StaticClass, TEXT("UTeacher"), &Z_Registration_Info_UClass_UTeacher, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTeacher), 1045328361U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Teacher_h_3143594365(TEXT("/Script/Part_1"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Teacher_h_818749171(TEXT("/Script/Part_1"),
 	Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Teacher_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Teacher_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

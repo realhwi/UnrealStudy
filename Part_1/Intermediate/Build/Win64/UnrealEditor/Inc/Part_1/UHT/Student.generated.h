@@ -14,16 +14,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PART_1_Student_generated_h
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUStudent(); \
 	friend struct Z_Construct_UClass_UStudent_Statics; \
 public: \
 	DECLARE_CLASS(UStudent, UPerson, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Part_1"), NO_API) \
-	DECLARE_SERIALIZER(UStudent)
+	DECLARE_SERIALIZER(UStudent) \
+	virtual UObject* _getUObject() const override { return const_cast<UStudent*>(this); }
 
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UStudent(UStudent&&); \
@@ -35,12 +36,12 @@ public: \
 	NO_API virtual ~UStudent();
 
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_13_PROLOG
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_16_GENERATED_BODY \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_14_PROLOG
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_16_INCLASS_NO_PURE_DECLS \
-	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_16_ENHANCED_CONSTRUCTORS \
+	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_INCLASS_NO_PURE_DECLS \
+	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

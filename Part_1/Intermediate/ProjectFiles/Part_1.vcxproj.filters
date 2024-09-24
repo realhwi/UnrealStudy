@@ -30,6 +30,12 @@
     <Filter Include="Source\Part_1">
       <UniqueIdentifier>{E9132B7E-32AA-3F68-8923-FD2C5BF08753}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Part_1\LessonInterface.cpp">
+      <Filter>Source\Part_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Part_1\LessonInterface.h">
+      <Filter>Source\Part_1</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Part_1\MyGameInstance.cpp">
       <Filter>Source\Part_1</Filter>
     </ClCompile>
@@ -55,6 +61,12 @@
       <Filter>Source\Part_1</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Part_1\Person.h">
+      <Filter>Source\Part_1</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Part_1\Staff.cpp">
+      <Filter>Source\Part_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Part_1\Staff.h">
       <Filter>Source\Part_1</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Part_1\Student.cpp">

@@ -18,9 +18,4 @@ public:
 	UMyGameInstance(); // 생성자 코드 추가 
 	
 	virtual void Init() override;
-
-private:
-	UPROPERTY() // 이렇게 매크로를 선언해야 해당 문자열을 언리얼 엔진이 관리할 수 있음.
-	FString SchoolName;
-	
 };

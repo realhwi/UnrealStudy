@@ -5,14 +5,11 @@
 
 UStudent::UStudent()
 {
-	Name = TEXT("학생이름");
-	Year = 1;
-	Id = 1;
+	Name = TEXT("김학생");
 }
 
 void UStudent::DoLesson()
 {
-	Super::DoLesson();
-
-	UE_LOG(LogTemp,Log,TEXT("%d학년 %d번 %s님이 수업을 듣습니다."),Year,Id,*Name);
+	ILessonInterface::DoLesson();
+	UE_LOG(LogTemp,Log,TEXT("%s님은 공부합니다."),*Name);
 }
