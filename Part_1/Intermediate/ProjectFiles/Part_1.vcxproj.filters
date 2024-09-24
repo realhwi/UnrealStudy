@@ -36,6 +36,12 @@
     <ClInclude Include="..\..\Source\Part_1\MyGameInstance.h">
       <Filter>Source\Part_1</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Part_1\MyObject.cpp">
+      <Filter>Source\Part_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Part_1\MyObject.h">
+      <Filter>Source\Part_1</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Part_1\Part_1.Build.cs">
       <Filter>Source\Part_1</Filter>
     </None>
@@ -43,6 +49,24 @@
       <Filter>Source\Part_1</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Part_1\Part_1.h">
+      <Filter>Source\Part_1</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Part_1\Person.cpp">
+      <Filter>Source\Part_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Part_1\Person.h">
+      <Filter>Source\Part_1</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Part_1\Student.cpp">
+      <Filter>Source\Part_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Part_1\Student.h">
+      <Filter>Source\Part_1</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Part_1\Teacher.cpp">
+      <Filter>Source\Part_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Part_1\Teacher.h">
       <Filter>Source\Part_1</Filter>
     </ClInclude>
   </ItemGroup>
