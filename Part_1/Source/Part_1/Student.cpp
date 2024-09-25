@@ -2,10 +2,12 @@
 
 
 #include "Student.h"
+#include "Card.h"
 
 UStudent::UStudent()
 {
 	Name = TEXT("김학생");
+	Card->SetCardType(ECardType::Student);
 }
 
 void UStudent::DoLesson()

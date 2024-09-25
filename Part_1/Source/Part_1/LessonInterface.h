@@ -27,3 +27,4 @@ public:
 		UE_LOG(LogTemp,Log,TEXT("수업에 입장합니다."));
 	}
 };
+

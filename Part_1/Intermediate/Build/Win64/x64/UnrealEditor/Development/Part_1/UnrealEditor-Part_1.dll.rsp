@@ -36,6 +36,7 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\Part_1Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Card.gen.cpp.obj"
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\LessonInterface.gen.cpp.obj"
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\MyGameInstance.gen.cpp.obj"
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\MyObject.gen.cpp.obj"
@@ -46,6 +47,7 @@
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Teacher.gen.cpp.obj"
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\MyObject.cpp.obj"
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Part_1.cpp.obj"
+"D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Card.cpp.obj"
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\LessonInterface.cpp.obj"
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\MyGameInstance.cpp.obj"
 "D:\00_git_update\01_Study\00_Unreal_class\00_Basic\UnrealStudy_part1\Part_1\Intermediate\Build\Win64\x64\UnrealEditor\Development\Part_1\Person.cpp.obj"

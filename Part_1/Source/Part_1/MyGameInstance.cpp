@@ -2,7 +2,7 @@
 
 
 #include "MyGameInstance.h"
-
+#include "Card.h"
 #include "Staff.h"
 #include "Student.h"
 #include  "Teacher.h"
@@ -17,29 +17,33 @@ void UMyGameInstance::Init()
 	Super::Init();	
 
 	UE_LOG(LogTemp,Log,TEXT("=============================================="));
-	// TArray를 사용해 UPerson 타입의 동적 배열 생성. 
-	TArray<UPerson*> person = {NewObject<UStudent>(),NewObject<UTeacher>(),NewObject<UStaff>()};
-	// 각 요소를 순회하며 이름을 로그에 출력
-	for(const auto Person : person) //for (변수 선언 : 컬렉션)
-	{
-		UE_LOG(LogTemp,Log,TEXT("구성원 이름 : %s"),*Person->GetName());
-	}
-	UE_LOG(LogTemp,Log,TEXT("=============================================="));
 
-	for(const auto Person : person)
+	// 학생,교사,직원 객체를 생성하고 TArray에 추가함 
+	TArray<UPerson*> Persons = { NewObject<UStudent>(),NewObject<UTeacher>(),NewObject<UStaff>() };
+
+	// Persons 배열의 각 요소 반복 
+	for (const auto Person : Persons)
 	{
-		// 현재 Person 객체를 ILesonInterface 타입으로 형변환 시도 
-		ILessonInterface* LessonInterface = Cast<ILessonInterface>(Person);
-		// 만약 성공한다면 (Person이 ILessonInterface를 구현하고 있다면) 
-		if(LessonInterface)
+		// 현재 Person 소유 카드를 가져옴 
+		const UCard* OwnCard = Person->GetCard();
+		// OwnCard가 null인지 확인 
+		check(OwnCard);
+		//카드 타입을 가져옴 
+		ECardType CardType = OwnCard->GetCardType();
+		//UE_LOG(LogTemp,Log,TEXT("%s님이 소유한 카드 종류 %d"),*Person->GetName(),*CardType);
+
+		// UEnum 클래스 인스턴스를 찾아서 가져옴 (열거형 경로)
+		const UEnum* CardEnumType = FindObject<UEnum>(nullptr, TEXT("/Script/Part_1.ECardType")); // 내 모듈 이름 지정해야함!! 
+
+		// 데이터를 찾으면 카드 타입 메타데이터를 가져옴 
+		if(CardEnumType)
 		{
-			UE_LOG(LogTemp,Log,TEXT("%s님은 수업에 참여할 수 있습니다."), *Person->GetName());
-			LessonInterface->DoLesson();
-		}
-		else
-		{
-			UE_LOG(LogTemp,Log,TEXT("%s님은 수업에 참여할 수 없습니다."),*Person->GetName());
+			// 카드 타입 값에 해당하는 디스플레이네임을 가져와 문자열 변환 
+			FString CardMetaData = CardEnumType->GetDisplayNameTextByValue((int64)CardType).ToString();
+			// 로그에 출력 
+			UE_LOG(LogTemp, Log, TEXT("%s님이 소유한 카드 종류: %s"), *Person->GetName(), *CardMetaData);
 		}
 	}
 	UE_LOG(LogTemp,Log,TEXT("=============================================="));
+	
 }
