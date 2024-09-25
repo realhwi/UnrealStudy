@@ -36,6 +36,12 @@
     <ClInclude Include="..\..\Source\Part_1\Card.h">
       <Filter>Source\Part_1</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Part_1\CourseInfo.cpp">
+      <Filter>Source\Part_1</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Part_1\CourseInfo.h">
+      <Filter>Source\Part_1</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Part_1\LessonInterface.cpp">
       <Filter>Source\Part_1</Filter>
     </ClCompile>

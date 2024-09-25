@@ -20,6 +20,10 @@ public:
 	UStudent();
 	
 	virtual void DoLesson() override;
+	
+	// 델리게이트에 의해 호출될 때 해당 알림을 처리하는 역할을 함
+	void GetNotification(const FString& School, const FString& NewCourseInfo);
+	
 private:
 
 };

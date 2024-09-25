@@ -3,6 +3,7 @@
 
 #include "MyGameInstance.h"
 #include "Card.h"
+#include "CourseInfo.h"
 #include "Staff.h"
 #include "Student.h"
 #include  "Teacher.h"
@@ -10,40 +11,33 @@
 
 UMyGameInstance::UMyGameInstance()
 {
+	SchoolName = TEXT("학교");
 }
 
 void UMyGameInstance::Init()
 {
 	Super::Init();	
 
+	// CourseInfo 객체를 생성하고 초기화 (현재 게임인스턴스를 Outer로 설정)
+	CourseInfo = NewObject<UCourseInfo>(this);
+	
 	UE_LOG(LogTemp,Log,TEXT("=============================================="));
+	// 학생 객체 세개를 생성하고 이름을 설정 
+	UStudent* Student1 = NewObject<UStudent>();
+	Student1->SeetName(TEXT("학생1"));
+	UStudent* Student2 = NewObject<UStudent>();
+	Student2->SeetName(TEXT("학생2"));
+	UStudent* Student3 = NewObject<UStudent>();
+	Student3->SeetName(TEXT("학생3"));
 
-	// 학생,교사,직원 객체를 생성하고 TArray에 추가함 
-	TArray<UPerson*> Persons = { NewObject<UStudent>(),NewObject<UTeacher>(),NewObject<UStaff>() };
+	// CourseInfo의 Onchanged 델리게이트에 학생들의 GetNotification 함수를 바인딩해서 학사 정보가 변경될 때 이 함수 호출 (아까 로그찍었던 것)
+	CourseInfo->OnChanged.AddUObject(Student1, &UStudent::GetNotification);
+	CourseInfo->OnChanged.AddUObject(Student2, &UStudent::GetNotification);
+	CourseInfo->OnChanged.AddUObject(Student3, &UStudent::GetNotification);
 
-	// Persons 배열의 각 요소 반복 
-	for (const auto Person : Persons)
-	{
-		// 현재 Person 소유 카드를 가져옴 
-		const UCard* OwnCard = Person->GetCard();
-		// OwnCard가 null인지 확인 
-		check(OwnCard);
-		//카드 타입을 가져옴 
-		ECardType CardType = OwnCard->GetCardType();
-		//UE_LOG(LogTemp,Log,TEXT("%s님이 소유한 카드 종류 %d"),*Person->GetName(),*CardType);
+	// CourseInfo의 학사 정보를 변경하고, 델리게이트를 통해 변경 사항을 알림 
+	CourseInfo->ChangedCoureInfo(SchoolName, TEXT("변경된 학사 정보"));
 
-		// UEnum 클래스 인스턴스를 찾아서 가져옴 (열거형 경로)
-		const UEnum* CardEnumType = FindObject<UEnum>(nullptr, TEXT("/Script/Part_1.ECardType")); // 내 모듈 이름 지정해야함!! 
-
-		// 데이터를 찾으면 카드 타입 메타데이터를 가져옴 
-		if(CardEnumType)
-		{
-			// 카드 타입 값에 해당하는 디스플레이네임을 가져와 문자열 변환 
-			FString CardMetaData = CardEnumType->GetDisplayNameTextByValue((int64)CardType).ToString();
-			// 로그에 출력 
-			UE_LOG(LogTemp, Log, TEXT("%s님이 소유한 카드 종류: %s"), *Person->GetName(), *CardMetaData);
-		}
-	}
 	UE_LOG(LogTemp,Log,TEXT("=============================================="));
 	
 }

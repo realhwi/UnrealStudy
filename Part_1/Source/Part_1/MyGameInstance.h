@@ -18,4 +18,11 @@ public:
 	UMyGameInstance(); // 생성자 코드 추가 
 	
 	virtual void Init() override;
+
+private:
+	UPROPERTY()
+	TObjectPtr<class UCourseInfo> CourseInfo;
+	
+	UPROPERTY()
+	FString SchoolName;
 };
