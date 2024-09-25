@@ -2,42 +2,76 @@
 
 
 #include "MyGameInstance.h"
-#include "Card.h"
-#include "CourseInfo.h"
-#include "Staff.h"
-#include "Student.h"
-#include  "Teacher.h"
-#include "UpdateTextureShaders.h"
-
-UMyGameInstance::UMyGameInstance()
-{
-	SchoolName = TEXT("학교");
-}
+#include "Algo/Accumulate.h" //알고리즘 라이브러리 추가 
 
 void UMyGameInstance::Init()
 {
-	Super::Init();	
-
-	// CourseInfo 객체를 생성하고 초기화 (현재 게임인스턴스를 Outer로 설정)
-	CourseInfo = NewObject<UCourseInfo>(this);
+	Super::Init();
 	
-	UE_LOG(LogTemp,Log,TEXT("=============================================="));
-	// 학생 객체 세개를 생성하고 이름을 설정 
-	UStudent* Student1 = NewObject<UStudent>();
-	Student1->SeetName(TEXT("학생1"));
-	UStudent* Student2 = NewObject<UStudent>();
-	Student2->SeetName(TEXT("학생2"));
-	UStudent* Student3 = NewObject<UStudent>();
-	Student3->SeetName(TEXT("학생3"));
+	// 배열 크기 지정 
+	const int32 ArrayNum = 10;
+	// 정수형 TArray 배열 Int32Array 선언 
+	TArray<int32> Int32Array;
+	// for루프를 통해 1~10까지의 값을 Int32Array에 추가 
+	for(int32 ix = 1; ix <= ArrayNum; ++ix)
+	{
+		// 배열에 값을 추가 Add로 
+		Int32Array.Add(ix);
+	}
+	// 람다식을 사용해 배열에서 짝수인 요소를 모두 제거 
+	Int32Array.RemoveAll(
+		[](int32 Val)
+		{
+			return Val % 2 ==0; // 짝수인 경우 true를 반환해 해당 요소 제거 
+		}
+	);
 
-	// CourseInfo의 Onchanged 델리게이트에 학생들의 GetNotification 함수를 바인딩해서 학사 정보가 변경될 때 이 함수 호출 (아까 로그찍었던 것)
-	CourseInfo->OnChanged.AddUObject(Student1, &UStudent::GetNotification);
-	CourseInfo->OnChanged.AddUObject(Student2, &UStudent::GetNotification);
-	CourseInfo->OnChanged.AddUObject(Student3, &UStudent::GetNotification);
+	// 배열에 2,4,6,8 요소를 추가 
+	Int32Array += {2,4,6,8,10};
 
-	// CourseInfo의 학사 정보를 변경하고, 델리게이트를 통해 변경 사항을 알림 
-	CourseInfo->ChangedCoureInfo(SchoolName, TEXT("변경된 학사 정보"));
+	// 비교할 또 다른 배열 선언 
+	TArray<int32> Int32ArrayCompare;
+	//C스타일 배열 선언하고 값을 초기화 
+	int32 CArray[] = {1,3,5,7,9,2,4,6,8,10};
+	// Int32ArrayCompare의 배열 메모리를 미리 할당하고 초기화하지 않음.
+	Int32ArrayCompare.AddUninitialized(ArrayNum);
+	//Memcpy를 사용해 cArray의 내용을 위 배열에 복사 
+	FMemory::Memcpy(Int32ArrayCompare.GetData(),CArray,sizeof(int32) *ArrayNum);
+	// 두 개의 배열이 동일한지 확인 
+	ensure(Int32Array == Int32ArrayCompare);
 
-	UE_LOG(LogTemp,Log,TEXT("=============================================="));
-	
+	// 모든 배열 요소의 합계를 저장할 변수 Sum
+	int32 Sum = 0;
+	for (const int32& Int32Elem : Int32Array) // Int32Array의 모든 요소를 합산해 Sum에 저장 
+	{
+		Sum += Int32Elem;
+	}
+
+	//Sum의 값이 55인지 확인 
+	ensure(Sum == 55);
+	// 알고리즘 라이브러리를 사용해 배열 요소 합계를 계산하고 SumByAlgo에 저장 
+	int32 SumByAlgo = Algo::Accumulate(Int32Array, 0);
+	// 두 값이 동일한지 확인 
+	ensure(Sum==SumByAlgo);
+
+	// 정수형 Tset 선언 
+	TSet<int32> Int32SEt;
+	for(int32 ix =1; ix<= ArrayNum; ++ix) // 1부터 ArrayName까지 값을 TSet에 추가 
+	{
+		Int32SEt.Add(ix); 
+	}
+
+	Int32SEt.Remove(2);
+	Int32SEt.Remove(4);
+	Int32SEt.Remove(6);
+	Int32SEt.Remove(8);
+	Int32SEt.Remove(10);
+	Int32SEt.Add(2);
+	Int32SEt.Add(4);
+	Int32SEt.Add(6);
+	Int32SEt.Add(8);
+	Int32SEt.Add(10);
+	// 지울때는 인덱스 순서대로, 더할때는 마지막 인덱스부터 거꾸로 채워짐  
+
+
 }

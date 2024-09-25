@@ -15,14 +15,10 @@ class PART_1_API UMyGameInstance : public UGameInstance
 	GENERATED_BODY()
 	
 public:
-	UMyGameInstance(); // 생성자 코드 추가 
+	UMyGameInstance(); 
 	
 	virtual void Init() override;
 
 private:
-	UPROPERTY()
-	TObjectPtr<class UCourseInfo> CourseInfo;
-	
-	UPROPERTY()
-	FString SchoolName;
+
 };
