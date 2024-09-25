@@ -19,9 +19,8 @@ private: \
 	static void StaticRegisterNativesUStudent(); \
 	friend struct Z_Construct_UClass_UStudent_Statics; \
 public: \
-	DECLARE_CLASS(UStudent, UPerson, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Part_1"), NO_API) \
-	DECLARE_SERIALIZER(UStudent) \
-	virtual UObject* _getUObject() const override { return const_cast<UStudent*>(this); }
+	DECLARE_CLASS(UStudent, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Part_1"), NO_API) \
+	DECLARE_SERIALIZER(UStudent)
 
 
 #define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_ENHANCED_CONSTRUCTORS \

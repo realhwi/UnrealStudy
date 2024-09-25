@@ -12,18 +12,11 @@
  * 
  */
 UCLASS()
-class PART_1_API UStudent : public UPerson,public ILessonInterface //UObject에서 UPerson으로 부모 변경 
+class PART_1_API UStudent : public UObject
 {
 	GENERATED_BODY()
 
 public:
 	UStudent();
-	
-	virtual void DoLesson() override;
-	
-	// 델리게이트에 의해 호출될 때 해당 알림을 처리하는 역할을 함
-	void GetNotification(const FString& School, const FString& NewCourseInfo);
-	
-private:
 
 };
