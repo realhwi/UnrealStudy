@@ -67,7 +67,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CE15D857-C0F0-31B6-8BD6-31489F566A98}</ProjectGuid>
+    <ProjectGuid>{42D6D1AB-5C0E-3561-8C05-E8120570E61D}</ProjectGuid>
     <RootNamespace>Part_1</RootNamespace>
   </PropertyGroup>
   <Import Project="UECommon.props" />
@@ -294,6 +294,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\Part_1\Student.h"/>
+    <ClCompile Include="..\..\Source\Part_1\StudentManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Part_1\StudentManager.h"/>
     <ClCompile Include="..\..\Source\Part_1\Teacher.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

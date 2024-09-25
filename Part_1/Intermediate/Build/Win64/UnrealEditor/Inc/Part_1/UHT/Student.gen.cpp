@@ -74,6 +74,7 @@ template<> PART_1_API UClass* StaticClass<UStudent>()
 {
 	return UStudent::StaticClass();
 }
+UStudent::UStudent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UStudent);
 UStudent::~UStudent() {}
 // End Class UStudent

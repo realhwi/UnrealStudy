@@ -17,6 +17,5 @@ class PART_1_API UStudent : public UObject
 	GENERATED_BODY()
 
 public:
-	UStudent();
 
 };
