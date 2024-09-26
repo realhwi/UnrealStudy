@@ -6,6 +6,22 @@
 #include "Engine/GameInstance.h"
 #include "MyGameInstance.generated.h"
 
+// 학생 정보를 담는 구조체 
+struct FStudentData
+{
+	FStudentData() {} // 기본 생성자 
+	FStudentData(int32 InOrder, const FString& InName); // Order,Name을 받아오는 생성자 
+
+	// 직렬화 연산자 오버로딩, 구조체를 파일에 저장하거나 불러올 때 사용 
+	friend FArchive& operator<<(FArchive& Ar, FStudentData& InStudentData)
+	{
+		Ar << InStudentData.Order; // Order 값을 파일에 저장 또는 불러옴
+		Ar << InStudentData.Name; // Name 값을 파일에 저장 또는 불러옴 
+		return  Ar;
+	}
+	int32 Order = -1;	// 학생 순서 저장 변수
+	FString Name = TEXT("홍길동"); // 학생 이름 저장 변수 
+};
 
 /**
  * 
@@ -16,25 +32,13 @@ class PART_1_API UMyGameInstance : public UGameInstance
 	GENERATED_BODY()
 	
 public:
+	UMyGameInstance();
 	
-	virtual void Init() override; // 엔진 시작시 호출 
-
-	virtual void Shutdown() override; // 엔진 종료시 호출
-
+	virtual void Init() override; 
+	
 private:
-
-	TObjectPtr<class UStudent> NonPropStudent; // 일반 언리얼 오브젝트 포인터
-
-	UPROPERTY() // 언리얼 오브젝트 포인터, 가비지 컬렉션 시스템에 의해 관리됨 
-	TObjectPtr<class UStudent> PropStudent;
-
-	// TArray 컨테이너 사용해서 만들어보기 
-	TArray<TObjectPtr<class UStudent>> NonPropStudents;
-	
-	UPROPERTY() 
-	TArray<TObjectPtr<class UStudent>> PropStudents;
-
-	class FStudentManager* StudentManager = nullptr;
-	// 일반 C++클래스 스튜던트 매니저 포인터 변수 
+	UPROPERTY()
+	TObjectPtr<class UStudent> StudentSrc;
+	//UStudent 객체 포인터. 
 	
 };

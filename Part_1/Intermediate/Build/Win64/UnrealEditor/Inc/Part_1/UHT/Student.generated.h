@@ -14,18 +14,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PART_1_Student_generated_h
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_15_ARCHIVESERIALIZER \
+	DECLARE_FSTRUCTUREDARCHIVE_SERIALIZER(UStudent, NO_API)
+
+
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUStudent(); \
 	friend struct Z_Construct_UClass_UStudent_Statics; \
 public: \
 	DECLARE_CLASS(UStudent, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Part_1"), NO_API) \
-	DECLARE_SERIALIZER(UStudent)
+	DECLARE_SERIALIZER(UStudent) \
+	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_15_ARCHIVESERIALIZER
 
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UStudent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UStudent(UStudent&&); \
@@ -33,16 +36,16 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UStudent); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UStudent); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UStudent) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UStudent) \
 	NO_API virtual ~UStudent();
 
 
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_14_PROLOG
-#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_GENERATED_BODY \
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_12_PROLOG
+#define FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_INCLASS_NO_PURE_DECLS \
-	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_17_ENHANCED_CONSTRUCTORS \
+	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_15_INCLASS_NO_PURE_DECLS \
+	FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_Student_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
