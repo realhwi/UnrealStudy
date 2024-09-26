@@ -18,7 +18,15 @@
             "d:\\00_git_update\\01_study\\00_unreal_class\\00_basic\\unrealstudy_part1\\part_1\\intermediate\\build\\win64\\unrealeditor\\inc\\part_1\\uht\\student.generated.h",
             "d:\\ue_5.4\\engine\\source\\runtime\\jsonutilities\\public\\jsonobjectconverter.h",
             "d:\\ue_5.4\\engine\\source\\runtime\\jsonutilities\\public\\jsonobjectwrapper.h",
-            "d:\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\jsonutilities\\uht\\jsonobjectwrapper.generated.h"
+            "d:\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\jsonutilities\\uht\\jsonobjectwrapper.generated.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\savepackage.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\packagewriter.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\io\\iodispatcher.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\io\\iobuffer.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\io\\iocontainerid.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\io\\iostatus.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\misc\\ienginecrypto.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\compactbinary.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

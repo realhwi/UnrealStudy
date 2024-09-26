@@ -4,6 +4,10 @@
 #include "MyGameInstance.h"
 #include "Student.h"
 #include "JsonObjectConverter.h"
+#include "UObject/SavePackage.h"
+
+const FString UMyGameInstance::PackageName = TEXT("/Game/Student");
+const FString UMyGameInstance::AssetName = TEXT("TopStudent");
 
 //학생 정보 출력하는 함수 정의 
 void printfStudentInfo(const UStudent* InStudent, const FString& InTag)
@@ -19,12 +23,21 @@ FStudentData::FStudentData(int32 InOrder, const FString& InName)
 
 UMyGameInstance::UMyGameInstance()
 {
+	// 패키지 이름과 에셋 이름을 합쳐 완전한 경로 생성 
+	const FString TopSoftObjectPath = FString::Printf(TEXT("%s.%s"), *PackageName, *AssetName);
+	// UStudent 에셋을 로드하고 오브젝트를 찾음 
+	static ConstructorHelpers::FObjectFinder<UStudent> UASSET_TopStudent(*TopSoftObjectPath);
+	if(UASSET_TopStudent.Succeeded())
+	{
+		//에셋이 로드되면 로드된 학생 정보를 출력 
+		printfStudentInfo(UASSET_TopStudent.Object, TEXT("Constructor"));
+	}
 }
 
 void UMyGameInstance::Init()
 {
 	Super::Init();
-
+	
 	// 구조체 불러오기. Order는 16, 이름은 김진휘 
 	FStudentData RawDataSrc(16,TEXT("김진휘"));
 
@@ -146,4 +159,99 @@ void UMyGameInstance::Init()
 			}
 		}
 	}
+
+	SaveStudentPackage();
+	//LoadStudentPackage();
+	//LoadStudentObject();
+
+	// 비동기 로딩을 시작하고 로딩이 완료되면 호출되는 콜백을 정의 
+	const FString TopSoftObjectPath = FString::Printf(TEXT("%s.%s"), *PackageName, *AssetName);
+	Handle = StreamableManager.RequestAsyncLoad(TopSoftObjectPath,
+		[&]() // 로딩 완료 시 실행되는 람다 함수 
+		{
+			// 핸들이 유효하고 로딩이 완료 되었는지 확인
+			if(Handle.IsValid() && Handle->HasLoadCompleted())
+			{
+				// 로드된 에셋을 UStudent 타입으로 캐스팅 
+				UStudent* TopStudent = Cast<UStudent>(Handle->GetLoadedAsset());
+				if(TopStudent) // 캐스팅이 성공했다면 
+				{
+					// 로드된 학생 정보를 출력 
+					printfStudentInfo(TopStudent, TEXT("AsyncLoad"));
+
+					// 로딩 핸들을 해제하고 초기화 함 
+					Handle->ReleaseHandle();
+					Handle.Reset();
+				}
+			}
+		}
+	);
+}
+
+void UMyGameInstance::SaveStudentPackage() const
+{
+	UPackage* StudentPackage = ::LoadPackage(nullptr,*PackageName,LOAD_None);
+	if(StudentPackage)
+	{
+		StudentPackage->FullyLoad();
+	}
+	
+	StudentPackage = CreatePackage(*PackageName);
+	// 오브젝트에 적용할 플래그를 지정 
+	EObjectFlags ObjectFlag = RF_Public | RF_Standalone;
+	
+	// UStudent 클래스의 새로운 객체를 패키지 내에 생성하고, 설정된 이름 플래그를 적용 
+	UStudent* TopStudent = NewObject<UStudent>(StudentPackage, UStudent::StaticClass(), *AssetName, ObjectFlag);
+	TopStudent->SetName(TEXT("김진휘")); // 객체 이름을 설정
+	TopStudent->SetOrder(30); // 객체 순번을 설정 
+
+	// 하위 학생 객체 추가 총 10개 
+	const int32 NumofSubs = 10;
+	for (int32 ix = 1; ix <= NumofSubs; ++ix)
+	{
+		// 하위 객체 이름 지정 
+		FString SubObjectName = FString::Printf(TEXT("Studnet%d"), ix);
+		// 하위 객체로서 새로운 학생 객체 생성 
+		UStudent* SubStudent = NewObject<UStudent>(TopStudent, UStudent::StaticClass(), *SubObjectName, ObjectFlag);
+		SubStudent->SetName(FString::Printf(TEXT("학생%d"),ix));
+		SubStudent->SetOrder(ix);
+	}
+	// 패키지 파일의 경로 및 이름 얻어옴 
+	const FString PackageFileName = FPackageName::LongPackageNameToFilename(PackageName, FPackageName::GetAssetPackageExtension());
+	// 패키지 저장을 위한 인자 설정 
+	FSavePackageArgs SaveArgs; 
+	SaveArgs.TopLevelFlags = ObjectFlag;
+	// 패지키 파일로 저장. 성공적으로 저장된 경우 로그 출력 
+	if(UPackage::SavePackage(StudentPackage, nullptr, *PackageFileName, SaveArgs))
+	{
+		UE_LOG(LogTemp,Log,TEXT("패키지가 성공적으로 저장되었습니다."));
+	}
+}
+
+void UMyGameInstance::LoadStudentPackage() const
+{
+	// 저장된 패키지 이름을 통해 패키지를 불러옴. 
+	UPackage* StudentPackage = ::LoadPackage(nullptr, *PackageName,LOAD_None);
+	// 패키지가 없을 경우 함수 종료 
+	if(nullptr==StudentPackage)
+	{
+		UE_LOG(LogTemp,Log,TEXT("패키지를 찾을 수 없습니다."));
+		return;
+	}
+	// 불러온 패키지를 완전히 메모리로 로드함 
+	StudentPackage->FullyLoad();
+	// 패지키 내에서 저장된 에셋 이름을 가진 UStudent 객체를 찾음 
+	UStudent* TopStudent = FindObject<UStudent>(StudentPackage, *AssetName);
+	// 찾은 학생 정보를 출력함 
+	printfStudentInfo(TopStudent, TEXT("FindObject Asset"));
+}
+
+void UMyGameInstance::LoadStudentObject() const
+{
+	// 패키지 이름과 에셋 이름을 합쳐서 완전한 경로 생성
+	const FString TopSoftObjectPath = FString::Printf(TEXT("%s.%s"), *PackageName, *AssetName);
+	// 패키지에서 UStudent 타입의 객체를 로드 
+	UStudent* TopStudent = LoadObject<UStudent>(nullptr,*TopSoftObjectPath);
+	//로드한 객체정보 출력 
+	printfStudentInfo(TopStudent, TEXT("LoadObject Asset"));
 }

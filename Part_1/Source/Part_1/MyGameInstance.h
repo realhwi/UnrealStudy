@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "Engine/StreamableManager.h" // 비동기 추가 
 #include "MyGameInstance.generated.h"
 
 // 학생 정보를 담는 구조체 
@@ -35,10 +36,21 @@ public:
 	UMyGameInstance();
 	
 	virtual void Init() override; 
+
+	void SaveStudentPackage() const; //패키지 전용 함수 선언
+	void LoadStudentPackage() const;
+	void LoadStudentObject() const;
 	
 private:
+	static const FString PackageName; // 패키지 이름 저장하는 상수 문자열
+	static const FString AssetName; // 에셋 이름 저장하는 상수 문자열 
+	
 	UPROPERTY()
 	TObjectPtr<class UStudent> StudentSrc;
-	//UStudent 객체 포인터. 
+	//UStudent 객체 포인터.
 	
+	// 비동기 로딩을 관리하는 객체, 에셋 로딩을 요청하고 제어함 
+	FStreamableManager StreamableManager; 
+	// 현재 비동기 로딩 요청의 상태를 추적하는 핸들을 저장하는 스마트 포인터
+	TSharedPtr<FStreamableHandle> Handle; 
 };

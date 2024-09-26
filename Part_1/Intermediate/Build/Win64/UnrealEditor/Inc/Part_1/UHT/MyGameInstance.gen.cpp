@@ -37,7 +37,13 @@ struct Z_Construct_UClass_UMyGameInstance_Statics
 		{ "ModuleRelativePath", "MyGameInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StudentSrc_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xec\x97\x90\xec\x85\x8b \xec\x9d\xb4\xeb\xa6\x84 \xec\xa0\x80\xec\x9e\xa5\xed\x95\x98\xeb\x8a\x94 \xec\x83\x81\xec\x88\x98 \xeb\xac\xb8\xec\x9e\x90\xec\x97\xb4 \n" },
+#endif
 		{ "ModuleRelativePath", "MyGameInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xec\x97\x90\xec\x85\x8b \xec\x9d\xb4\xeb\xa6\x84 \xec\xa0\x80\xec\x9e\xa5\xed\x95\x98\xeb\x8a\x94 \xec\x83\x81\xec\x88\x98 \xeb\xac\xb8\xec\x9e\x90\xec\x97\xb4" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StudentSrc;
@@ -93,10 +99,10 @@ UMyGameInstance::~UMyGameInstance() {}
 struct Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyGameInstance, UMyGameInstance::StaticClass, TEXT("UMyGameInstance"), &Z_Registration_Info_UClass_UMyGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyGameInstance), 3644426270U) },
+		{ Z_Construct_UClass_UMyGameInstance, UMyGameInstance::StaticClass, TEXT("UMyGameInstance"), &Z_Registration_Info_UClass_UMyGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyGameInstance), 894393860U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_2427276681(TEXT("/Script/Part_1"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_2559379420(TEXT("/Script/Part_1"),
 	Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_00_git_update_01_Study_00_Unreal_class_00_Basic_UnrealStudy_part1_Part_1_Source_Part_1_MyGameInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
